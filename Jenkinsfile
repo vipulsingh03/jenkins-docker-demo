@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t jenkins-demo:v1 .'
+            }
+        }
+
+    }
+}
