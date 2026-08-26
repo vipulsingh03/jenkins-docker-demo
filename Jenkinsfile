@@ -39,7 +39,7 @@ pipeline {
                 sh 'docker pull $IMAGE_NAME:$IMAGE_TAG'
                 sh 'docker stop jenkins-demo || true'
                 sh 'docker rm jenkins-demo || true'
-                sh 'docker run -d --name jenkins-demo -p 8081:80 ${IMAGE_NAME}:${IMAGE_TAG}
+                sh 'docker run -d --name jenkins-demo -p 8081:80 ${IMAGE_NAME}:${IMAGE_TAG}'
             }
         }
     }
